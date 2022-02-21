@@ -4,33 +4,70 @@
     padding: 0;
 }
 
+:root {
+    --header: #222831;
+    --sidebar: #393E46;
+    --main: #EEEEEE;
+    --accent: #00ADB5;
+    --project: #cfcccc;
+}
+
 body {
     display: grid;
-    grid-template-columns: 1fr 4fr;
+    grid-template-columns: 1fr 5fr;
+    height: 100%;
 }
 
 header {
     grid-column: span 2;
-    background-color: #222831;
+    background-color: var(--header);
     text-align: center;
     color: white;
     padding: 15px;
 }
 
 .sidebar {
-    background-color: #393E46;
+    background-color: var(--sidebar);
     text-align: center;
     color: white;
     padding: 20px;
+    height: 85vh;
 }
 
 .main {
-    background-color: #EEEEEE;
+    background-color: var(--main);
+    display: flex;
+    justify-content: center;
+    padding: 20px;
 }
 
 footer {
     grid-column: span 2;
-    background-color: #222831;
+    background-color: var(--header);
     text-align: center;
     color: white;
+    height: 20px;
+}
+
+.project {
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+    text-align: center;
+    background-color: var(--project);
+}
+
+.project button {
+    background-color: var(--accent);
+    border: none;
+    border-radius: 10px;
+    height: 2rem;
+}
+
+.project button:hover {
+    background-color: #5adbe2;
+    cursor: pointer;
 }
